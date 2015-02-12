@@ -1,0 +1,32 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+//返回服务器地址
+#define HostUrl [[BusinessURL Instance] getURLWithRequest:URL_Host]
+//缓存归档文件夹
+#define CacheDirectory @"CacheData"
+
+//判断当前系统版本是否ios7
+#define IOS7_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending )
+
+//获得当前屏幕宽
+#define ScreenWidth [[UIScreen mainScreen] bounds].size.width
+//获得当前屏幕高
+#define ScreenHeight [[UIScreen mainScreen] bounds].size.height
+
+//转换色值为uicolor
+#define UICOLOR_RGB_Alpha(_color,_alpha) [UIColor colorWithRed:((_color>>16)&0xff)/255.0f green:((_color>>8)&0xff)/255.0f blue:(_color&0xff)/255.0f alpha:_alpha]
