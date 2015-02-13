@@ -8,8 +8,8 @@
 
 #import "CollectionViewCell.h"
 @interface CollectionViewCell()
-@property(nonatomic,strong)UIImageView * imgView;
-@property(nonatomic,strong)UIView * maskView;
+@property(nonatomic,strong)IBOutlet UIImageView * imgView;
+@property(nonatomic,strong)IBOutlet UIView * maskView;
 @end
 
 @implementation CollectionViewCell
@@ -19,9 +19,16 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom initialization
-        [self addSubviews];
+        //[self addSubviews];
     }
     return self;
+}
+
+-(void)layoutSubviews
+{
+    NSLog(@"Layout");
+    [super layoutSubviews];
+    [self addSubviews];
 }
 
 #pragma mark - 自定义方法
@@ -29,6 +36,7 @@
 -(void)addSubviews
 {
     CGRect rect=CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    NSLog(@"Width:%f,Height:%f",self.frame.size.width,self.frame.size.height);
     self.imgView=[[UIImageView alloc]initWithFrame:rect];
     [self addSubview:self.imgView];
     
@@ -37,7 +45,6 @@
     self.maskView.alpha=0.5;
     self.maskView.hidden=YES;
     [self addSubview:self.maskView];
-    
 }
 //设置预览图
 -(void)setThumbnailImage:(UIImage *)img

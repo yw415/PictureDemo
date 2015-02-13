@@ -46,6 +46,7 @@
 		CE970B871A83167F00339577 /* ImageProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = CE970B861A83167F00339577 /* ImageProcess.m */; };
 		CE97A8361A78A757008B1103 /* PhotoGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE97A8351A78A757008B1103 /* PhotoGroupCell.xib */; };
 		CE9B828E1A806BD4008E447C /* PhotoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9B828D1A806BD4008E447C /* PhotoEditViewController.m */; };
+		CE9BDFDC1A8DC6BB0046C5EF /* TemplateView4S.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9BDFDB1A8DC6BB0046C5EF /* TemplateView4S.xib */; };
 		CECCD4081991160800F2289F /* General_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECCD4041991160800F2289F /* General_ViewController.m */; };
 		CECCD4BC199116D500F2289F /* ConfigSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = CECCD40C199116D500F2289F /* ConfigSDK.m */; };
 		CECCD4BD199116D500F2289F /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CECCD410199116D500F2289F /* BlockAlertView.m */; };
@@ -82,6 +83,7 @@
 		CECCD5ED1991176400F2289F /* ZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = CECCD5A81991176400F2289F /* ZipArchive.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CECCD5F0199117DF00F2289F /* NSArray+objectAtIndexSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = CECCD5EF199117DF00F2289F /* NSArray+objectAtIndexSafe.m */; };
 		CECCD5F51991191300F2289F /* PhotoTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECCD5F41991191300F2289F /* PhotoTemplateViewController.m */; };
+		CEEBFDD51A8C872500CC30F6 /* Print.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEEBFDD41A8C872500CC30F6 /* Print.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +156,7 @@
 		CE97A8351A78A757008B1103 /* PhotoGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoGroupCell.xib; sourceTree = "<group>"; };
 		CE9B828C1A806BD4008E447C /* PhotoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoEditViewController.h; sourceTree = "<group>"; };
 		CE9B828D1A806BD4008E447C /* PhotoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoEditViewController.m; sourceTree = "<group>"; };
+		CE9BDFDB1A8DC6BB0046C5EF /* TemplateView4S.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemplateView4S.xib; sourceTree = "<group>"; };
 		CECCD4031991160800F2289F /* General_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = General_ViewController.h; sourceTree = "<group>"; };
 		CECCD4041991160800F2289F /* General_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = General_ViewController.m; sourceTree = "<group>"; };
 		CECCD40B199116D500F2289F /* ConfigSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigSDK.h; sourceTree = "<group>"; };
@@ -227,6 +230,7 @@
 		CECCD5EF199117DF00F2289F /* NSArray+objectAtIndexSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+objectAtIndexSafe.m"; sourceTree = "<group>"; };
 		CECCD5F31991191300F2289F /* PhotoTemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTemplateViewController.h; sourceTree = "<group>"; };
 		CECCD5F41991191300F2289F /* PhotoTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTemplateViewController.m; sourceTree = "<group>"; };
+		CEEBFDD41A8C872500CC30F6 /* Print.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Print.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +405,7 @@
 			children = (
 				CE94A6911A886B17009D7849 /* star.png */,
 				CE94A1361A81C4030086FDD4 /* Filter.plist */,
+				CEEBFDD41A8C872500CC30F6 /* Print.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 		CE95F10D1A75DB340061687D /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				CE9BDFDB1A8DC6BB0046C5EF /* TemplateView4S.xib */,
 				CE7769661A7DCFF000598E64 /* TemplateView.xib */,
 				CE9600471A7DCE0C006D1571 /* PhotoFrame.h */,
 				CE9600481A7DCE0C006D1571 /* PhotoFrame.m */,
@@ -804,6 +810,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE84131F1990FBC00053D5F3 /* InfoPlist.strings in Resources */,
+				CE9BDFDC1A8DC6BB0046C5EF /* TemplateView4S.xib in Resources */,
 				CE93BA0C1A32C98F0036350B /* Main.storyboard in Resources */,
 				CE94A1371A81C4030086FDD4 /* Filter.plist in Resources */,
 				CE7769671A7DCFF000598E64 /* TemplateView.xib in Resources */,
@@ -813,6 +820,7 @@
 				CE8413271990FBC00053D5F3 /* Images.xcassets in Resources */,
 				CECCD5DF1991176400F2289F /* Icon-Small.png in Resources */,
 				CE94A6921A886B17009D7849 /* star.png in Resources */,
+				CEEBFDD51A8C872500CC30F6 /* Print.plist in Resources */,
 				CECCD5E01991176400F2289F /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

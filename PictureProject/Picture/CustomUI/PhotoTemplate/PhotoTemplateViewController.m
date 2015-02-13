@@ -73,7 +73,16 @@
 -(void)addSubviews
 {
     __weak PhotoTemplateViewController * tempView=self;
-    NSArray * xibs=[[NSBundle mainBundle]loadNibNamed:@"TemplateView" owner:nil options:nil];
+    NSArray * xibs=nil;
+    if(IPhone4s)
+    {
+       
+        xibs=[[NSBundle mainBundle]loadNibNamed:@"TemplateView4S" owner:nil options:nil];
+    }
+    else
+    {
+        xibs=[[NSBundle mainBundle]loadNibNamed:@"TemplateView" owner:nil options:nil];
+    }
     self.templateView=[xibs objectAtIndex:0];
     self.templateView.frame=CGRectMake(0,
                                        64,

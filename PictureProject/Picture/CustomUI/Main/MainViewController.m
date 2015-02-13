@@ -22,6 +22,11 @@
     // Do any additional setup after loading the view.
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -65,7 +70,18 @@
     if ([segue.identifier isEqual:@"PresentPhotoList"])
     {
         NSInteger tag=((UIButton *)sender).tag;
-        PhotoListViewController * photoList=(PhotoListViewController *)segue.destinationViewController;
+        UIViewController * obj = segue.destinationViewController;
+        PhotoListViewController * photoList=nil;
+        if([obj class] ==[UINavigationController class])
+        {
+            UINavigationController * nav=(UINavigationController *)obj;
+            photoList= [nav.viewControllers objectAtIndex:0];
+        }
+        else
+        {
+            photoList=(PhotoListViewController *)obj;
+        }
+   
         if(tag==0)
         {
             photoList.maxPhototCount=4;

@@ -12,45 +12,53 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62G-jn-Mmw" customClass="PhotoFrame">
-                    <rect key="frame" x="16" y="38" width="138" height="162"/>
+                    <rect key="frame" x="13" y="38" width="138" height="162"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUq-a4-A3S" customClass="PhotoFrame">
-                    <rect key="frame" x="168" y="38" width="137" height="162"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pOv-yV-rij" customClass="PhotoFrame">
+                    <rect key="frame" x="168" y="38" width="138" height="162"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jt3-h8-YfX" customClass="PhotoFrame">
-                    <rect key="frame" x="168" y="228" width="137" height="162"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8A-Ep-3U7" customClass="PhotoFrame">
+                    <rect key="frame" x="13" y="231" width="138" height="162"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwg-Fk-E5N" customClass="PhotoFrame">
-                    <rect key="frame" x="16" y="228" width="137" height="162"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVe-Xr-QC4" customClass="PhotoFrame">
+                    <rect key="frame" x="168" y="231" width="138" height="162"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="0.57686528290000005" blue="0.46235912880000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="hwg-Fk-E5N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="237-v3-dU7"/>
-                <constraint firstItem="rUq-a4-A3S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="38" id="2S4-Kl-JAW"/>
                 <constraint firstItem="62G-jn-Mmw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="4rP-gC-Aue"/>
-                <constraint firstAttribute="trailing" secondItem="hwg-Fk-E5N" secondAttribute="trailing" constant="167" id="7nM-Jv-oSu"/>
-                <constraint firstItem="rUq-a4-A3S" firstAttribute="leading" secondItem="62G-jn-Mmw" secondAttribute="trailing" constant="14" id="AfH-jG-nLs"/>
-                <constraint firstAttribute="bottom" secondItem="hwg-Fk-E5N" secondAttribute="bottom" constant="46" id="Jlo-6k-pYY"/>
+                <constraint firstAttribute="trailing" secondItem="pOv-yV-rij" secondAttribute="trailing" constant="14" id="5gc-ZQ-FcX"/>
+                <constraint firstItem="62G-jn-Mmw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="13" id="EXV-EH-7Jd"/>
                 <constraint firstAttribute="trailing" secondItem="62G-jn-Mmw" secondAttribute="trailing" constant="166" id="L60-x1-MzS"/>
-                <constraint firstItem="jt3-h8-YfX" firstAttribute="leading" secondItem="hwg-Fk-E5N" secondAttribute="trailing" constant="15" id="Rel-h2-ePU"/>
-                <constraint firstItem="jt3-h8-YfX" firstAttribute="top" secondItem="rUq-a4-A3S" secondAttribute="bottom" constant="28" id="e0M-Cp-EOb"/>
+                <constraint firstItem="Q8A-Ep-3U7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="13" id="ZFZ-eX-v8m"/>
+                <constraint firstItem="62G-jn-Mmw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="38" id="bKG-uT-6Fi"/>
+                <constraint firstAttribute="trailing" secondItem="62G-jn-Mmw" secondAttribute="trailing" constant="169" id="bbm-8a-bJ8"/>
+                <constraint firstItem="pOv-yV-rij" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="38" id="cxN-iI-DZR"/>
                 <constraint firstAttribute="bottom" secondItem="62G-jn-Mmw" secondAttribute="bottom" constant="236" id="eiR-Io-bvn"/>
-                <constraint firstAttribute="bottom" secondItem="jt3-h8-YfX" secondAttribute="bottom" constant="46" id="hmf-Gz-DcC"/>
-                <constraint firstItem="hwg-Fk-E5N" firstAttribute="top" secondItem="62G-jn-Mmw" secondAttribute="bottom" constant="28" id="nw8-f0-qHt"/>
-                <constraint firstAttribute="trailing" secondItem="jt3-h8-YfX" secondAttribute="trailing" constant="15" id="o32-Be-ZfF"/>
+                <constraint firstItem="Q8A-Ep-3U7" firstAttribute="top" secondItem="62G-jn-Mmw" secondAttribute="bottom" constant="31" id="fUW-Eq-l6l"/>
+                <constraint firstAttribute="trailing" secondItem="Q8A-Ep-3U7" secondAttribute="trailing" constant="169" id="hN2-uU-Hur"/>
+                <constraint firstItem="pOv-yV-rij" firstAttribute="height" secondItem="62G-jn-Mmw" secondAttribute="height" id="hQ3-Aq-KWs"/>
+                <constraint firstAttribute="centerY" secondItem="62G-jn-Mmw" secondAttribute="centerY" constant="99" id="kG2-od-Cqn"/>
+                <constraint firstAttribute="bottom" secondItem="Q8A-Ep-3U7" secondAttribute="bottom" constant="43" id="mhh-aF-i4a"/>
+                <constraint firstItem="pOv-yV-rij" firstAttribute="leading" secondItem="62G-jn-Mmw" secondAttribute="trailing" constant="17" id="ouA-Cf-OkM"/>
                 <constraint firstItem="62G-jn-Mmw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="38" id="pTy-A6-aNi"/>
-                <constraint firstAttribute="bottom" secondItem="rUq-a4-A3S" secondAttribute="bottom" constant="236" id="qXa-fZ-ZP1"/>
-                <constraint firstAttribute="trailing" secondItem="rUq-a4-A3S" secondAttribute="trailing" constant="15" id="tz9-mQ-gl3"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="4rP-gC-Aue"/>
+                    <exclude reference="L60-x1-MzS"/>
+                    <exclude reference="eiR-Io-bvn"/>
+                    <exclude reference="pTy-A6-aNi"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="photoFrame1" destination="62G-jn-Mmw" id="cgh-2r-nkN"/>
-                <outlet property="photoFrame2" destination="rUq-a4-A3S" id="Gjh-tp-YmU"/>
-                <outlet property="photoFrame3" destination="hwg-Fk-E5N" id="eFN-IV-Hd0"/>
-                <outlet property="photoFrame4" destination="jt3-h8-YfX" id="9as-2B-4eM"/>
+                <outlet property="photoFrame2" destination="pOv-yV-rij" id="rS9-K8-aev"/>
+                <outlet property="photoFrame3" destination="Q8A-Ep-3U7" id="MUW-hh-res"/>
+                <outlet property="photoFrame4" destination="aVe-Xr-QC4" id="ecW-4z-kWT"/>
             </connections>
         </view>
     </objects>

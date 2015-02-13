@@ -51,9 +51,6 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-
- 
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,7 +81,7 @@
     [self.view bringSubviewToFront:self.optionView];
     
     CGRect rect = CGRectMake(0,
-                            self.optionView.frame.origin.y,
+                           ScreenHeight-50,
                             ScreenWidth,
                             self.photoGroups.count*CellHeight);
     //添加列表
@@ -119,10 +116,11 @@
     {
         
         [UIView animateWithDuration:0.4 animations:^{
-            self.photoTable.frame=CGRectMake(self.photoTable.frame.origin.x,
-                                             self.photoTable.frame.origin.y-self.photoTable.frame.size.height,
-                                             self.photoTable.frame.size.width,
-                                             self.photoTable.frame.size.height);
+            CGRect rect=CGRectMake(self.photoTable.frame.origin.x,
+                                   self.photoTable.frame.origin.y-self.photoTable.frame.size.height,
+                                   self.photoTable.frame.size.width,
+                                   self.photoTable.frame.size.height);
+            self.photoTable.frame=rect;
             self.maskView.alpha=0.5;
         }];
     }
@@ -130,10 +128,11 @@
     {
         
         [UIView animateWithDuration:0.4 animations:^{
-            self.photoTable.frame=CGRectMake(self.photoTable.frame.origin.x,
-                                             self.optionView.frame.origin.y,
-                                             self.photoTable.frame.size.width,
-                                             self.photoTable.frame.size.height);
+            CGRect rect=CGRectMake(self.photoTable.frame.origin.x,
+                                   self.optionView.frame.origin.y,
+                                   self.photoTable.frame.size.width,
+                                   self.photoTable.frame.size.height);
+            self.photoTable.frame=rect;
             self.maskView.alpha=0.0;
         }];
     }
@@ -160,22 +159,45 @@
 #pragma mark - 跳转相关
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([segue.identifier isEqualToString:@"ShowPhotoTemplate"])
+    UIViewController * obj = segue.destinationViewController;
+    if([obj class] ==[UINavigationController class])
     {
-        PhotoTemplateViewController * templateView=
-        (PhotoTemplateViewController *)segue.destinationViewController;
-        templateView.selectedImgs=self.selectedItem;
-        templateView.selectedKeys=self.selectedKeys;
-        
+        UINavigationController * nav=(UINavigationController *)obj;
+        if([segue.identifier isEqualToString:@"ShowPhotoTemplate"])
+        {
+            PhotoTemplateViewController * templateView=[nav.viewControllers objectAtIndex:0];
+            templateView.selectedImgs=self.selectedItem;
+            templateView.selectedKeys=self.selectedKeys;
+            
+        }
+        else
+        {
+            PhotoEditViewController * photoEdit=[nav.viewControllers objectAtIndex:0];
+            NSString * key=[self.selectedItem.allKeys objectAtIndex:0];
+            UIImage * img=[self.selectedItem objectForKey:key];
+            photoEdit.photo=img;
+        }
     }
     else
     {
-        PhotoEditViewController * photoEdit=
-        (PhotoEditViewController *)segue.destinationViewController;
-        NSString * key=[self.selectedItem.allKeys objectAtIndex:0];
-        UIImage * img=[self.selectedItem objectForKey:key];
-        photoEdit.photo=img;
+        if([segue.identifier isEqualToString:@"ShowPhotoTemplate"])
+        {
+            PhotoTemplateViewController * templateView=
+            (PhotoTemplateViewController *)segue.destinationViewController;
+            templateView.selectedImgs=self.selectedItem;
+            templateView.selectedKeys=self.selectedKeys;
+            
+        }
+        else
+        {
+            PhotoEditViewController * photoEdit=
+            (PhotoEditViewController *)segue.destinationViewController;
+            NSString * key=[self.selectedItem.allKeys objectAtIndex:0];
+            UIImage * img=[self.selectedItem objectForKey:key];
+            photoEdit.photo=img;
+        }
     }
+
 }
 
 #pragma mark - Table Delegate
